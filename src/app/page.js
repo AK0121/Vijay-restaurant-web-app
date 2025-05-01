@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col item-center justify-start w-full min-h-screen gap-16">
-      <div className="header flex h-96 w-7xl mx-auto items-cente relative top-0">
+    <div className="flex flex-col items-center w-full min-h-screen gap-16">
+      <div className="header flex h-96 w-7xl mx-auto items-center relative top-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="logo absolute top-12 left-0 lg:left-16 lg:-top-48"
+          className="logo absolute top-6 left-0 lg:left-16 lg:-top-48"
         >
           <Image
             alt="Vijay-Restaurant Logo Image"
@@ -19,7 +19,7 @@ export default function Home() {
             priority = "true"
             width={650}
             height={550}
-            className="w-7xl h-7xl lg:w-3xl lg:h-2xl"
+            className="w-4xl h-4xl lg:w-3xl lg:h-2xl"
           />
         </motion.div>
         <motion.div
@@ -37,17 +37,21 @@ export default function Home() {
             src="/images/dosa-img.png"
             width={650}
             height={650}
-            className="w-52 h-52 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-96 lg:h-md"
+            className="w-md h-md sm:w-md sm:h-md md:w-md md:h-md lg:w-96 lg:h-md"
           />
         </motion.div>
       </div>
-      <div className="body items-center">
-        <div className="hero-text">
-          <h1 className="">Skip Lines</h1>
-          <h1>&</h1>
-          <h2>Eat like a genius</h2>
+
+      <div className="body">
+        <div className="main-heading">
+        <h1>Skip lines</h1>
+        <h1>&</h1>
+        <h2>Eat like a genius</h2>
         </div>
+
+        <button className="cta-btn capitalize bg-red-600 py-2 px-5 cursor-pointer rounded-xl text-xl hover:scale-105 transition-all">Skip the queue</button>
       </div>
+     
     </div>
   );
 }
